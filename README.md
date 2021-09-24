@@ -1,2 +1,2 @@
-# Custom-Developer-Products-Python
-This python script allows for you to create custom developer products in Roblox using a Python webserver
+# RoPython
+A WIP wrapper for the Roblox API in python
