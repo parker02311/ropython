@@ -1,0 +1,10 @@
+site_name: RoPython Documentation
+site_description: 'Documentation for RoPython'
+site_author: 'parker02311'
+docs_dir: docs/
+repo_name: 'parker02311/ropython'
+repo_url: 'https://github.com/parker02311/ropython'
+nav:
+    - Home: index.md
+theme:
+  name: 'material'
