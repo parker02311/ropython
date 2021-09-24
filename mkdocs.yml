@@ -12,3 +12,8 @@ theme:
     scheme: slate
     primary: black
     accent: green
+plugins:
+  - search
+  - gen-files:
+      scripts:
+        - gen_doc_stubs.py
