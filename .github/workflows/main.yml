@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
+        
+      - name: run pip installs for extra addons
+        run: pip install mkdocs-gen-files
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
