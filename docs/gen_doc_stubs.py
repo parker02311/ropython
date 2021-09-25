@@ -33,3 +33,4 @@ for nav_piece in generated_nav:
 with mkdocs_gen_files.open("reference/SUMMARY.md", "w") as nav_file:
     print(nav_string)
     nav_file.write(nav_string)
+    print(nav_file.read())
