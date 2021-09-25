@@ -6,7 +6,9 @@ docs_dir: docs/
 repo_name: 'parker02311/ropython'
 repo_url: 'https://github.com/parker02311/ropython'
 nav:
-    - Home: index.md
+    - Overview: index.md
+    - Api Reference
+        - Client: ropython/client
 theme:
   name: 'material'
   palette:
@@ -35,5 +37,3 @@ plugins:
   - mermaid2:
       arguments:
         theme: dark
-  - literate-nav:
-      nav_file: SUMMARY.md
