@@ -1,4 +1,5 @@
 site_name: RoPython Documentation
+site_url: https://parker02311.github.io/ropython/
 site_description: 'Documentation for RoPython'
 site_author: 'parker02311'
 docs_dir: docs/
