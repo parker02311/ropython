@@ -11,11 +11,9 @@ for package_name in package_names:
         module_path = path.with_suffix("")
         doc_path = path.with_suffix(".md")
 
-        full_doc_path = Path("reference", doc_path)
-
         nav[module_path.parts] = str(doc_path)
-        print(full_doc_path)
-        with mkdocs_gen_files.open(full_doc_path, "w") as f:
+        print(doc_path)
+        with mkdocs_gen_files.open(doc_path, "w") as f:
             ident = ".".join(module_path.parts)
             data = "::: " + ident
             print(data, file=f)

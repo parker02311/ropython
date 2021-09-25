@@ -1,7 +1,7 @@
 * [Overview](index.md)
-* [Code Reference](reference/)
-    * [\_\_init\_\_](reference/ropython//__init__)
-    * [client](reference/ropython/client)
-    * [game](reference/ropython/game)
+* [Api Reference](ropython/)
+    * [\_\_init\_\_](ropython//__init__)
+    * [client](ropython/client)
+    * [game](ropython/game)
     * utils
-        * [request](reference/ropython/utils/request)
+        * [request](ropython/utils/request)
