@@ -25,8 +25,8 @@ generated_nav = nav.build_literate_nav()
 nav_string = ""
 
 for nav_piece in generated_nav:
-#    nav_piece = nav_piece.replace("[\\__init__]", "[\\_\\_init\\_\\_]")
-#    nav_piece = nav_piece.replace("__init__.md", "/__init__.md")
+    nav_piece = nav_piece.replace("[\\__init__]", "[\\_\\_init\\_\\_]")
+    nav_piece = nav_piece.replace("__init__.md", "/__init__.md")
     nav_string += nav_piece
 
 
