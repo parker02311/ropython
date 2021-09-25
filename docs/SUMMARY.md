@@ -1,7 +1,7 @@
 * [Overview](index.md)
 * ropython
-    * [\_\_init\_\_](ropython//__init__.md)
-    * [client](ropython/client.md)
-    * [game](ropython/game.md)
+    * [\_\_init\_\_](ropython//__init__)
+    * [client](ropython/client)
+    * [game](ropython/game)
     * utils
-        * [request](ropython/utils/request.md)
+        * [request](ropython/utils/request)
