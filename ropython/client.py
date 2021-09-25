@@ -1,4 +1,4 @@
-from .utils.request import request
+from .utils.request import Request
 
 class Client:
     """
@@ -17,7 +17,7 @@ class Client:
         Get's a x-csrf-token from Roblox which is required for all requests.
         """
         # This doesn't acutally log you out since we aren't passing in a token
-        r = request.post("https://auth.roblox.com/v2/logout", cookies={".ROBLOSECURITY": self.cookie})
+        r = Request.post("https://auth.roblox.com/v2/logout", cookies={".ROBLOSECURITY": self.cookie})
         if r.headers["x-csrf-token"]:
             self.token = r.headers["x-csrf-token"]
             return r.headers["x-csrf-token"]
