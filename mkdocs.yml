@@ -5,10 +5,6 @@ site_author: 'parker02311'
 docs_dir: docs/
 repo_name: 'parker02311/ropython'
 repo_url: 'https://github.com/parker02311/ropython'
-nav:
-    - Overview: index.md
-    - Api Reference: ropython
-        - Client: ropython/client
 theme:
   name: 'material'
   palette:
