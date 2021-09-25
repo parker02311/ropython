@@ -8,7 +8,7 @@ package_names = ["ropython"]
 
 for package_name in package_names:
     for path in sorted(Path(package_name).glob("**/*.py")):
-        module_path = path.with_suffix("")
+        module_path = path.with_suffix(".py")
         doc_path = path.with_suffix(".md")
 
         full_doc_path = Path("reference", doc_path)
