@@ -20,19 +20,19 @@ for package_name in package_names:
             data = "::: " + ident
             print(data, file=f)
 
-generated_nav = nav.build_literate_nav()
+# generated_nav = nav.build_literate_nav()
 
-nav_string = ""
+# nav_string = ""
 
-for nav_piece in generated_nav:
-    nav_piece = nav_piece.replace("[\\__init__]", "[\\_\\_init\\_\\_]")
-    nav_piece = nav_piece.replace("__init__.md", "/__init__.md")
-    nav_string += nav_piece
+# for nav_piece in generated_nav:
+#     nav_piece = nav_piece.replace("[\\__init__]", "[\\_\\_init\\_\\_]")
+#     nav_piece = nav_piece.replace("__init__.md", "/__init__.md")
+#     nav_string += nav_piece
 
 
-with mkdocs_gen_files.open("reference/SUMMARY.md", "w") as nav_file:
-    print(nav_string)
-    nav_file.write(nav_string)
+# with mkdocs_gen_files.open("reference/SUMMARY.md", "w") as nav_file:
+#     print(nav_string)
+#     nav_file.write(nav_string)
 
-with mkdocs_gen_files.open("reference/SUMMARY.md", "r") as nav_file:
-    print(nav_file.read())
+# with mkdocs_gen_files.open("reference/SUMMARY.md", "r") as nav_file:
+#     print(nav_file.read())
