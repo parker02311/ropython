@@ -7,7 +7,7 @@ repo_name: 'parker02311/ropython'
 repo_url: 'https://github.com/parker02311/ropython'
 nav:
     - Overview: index.md
-    - Api Reference
+    - Api Reference:
         - Client: ropython/client
 theme:
   name: 'material'
