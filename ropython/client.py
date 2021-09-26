@@ -1,5 +1,5 @@
 from .utils.request import Request
-import utils.session
+from .utils.session import session_cookie
 
 
 class Client:
@@ -14,7 +14,7 @@ class Client:
             cookie: The Roblox cookie in it's entirety
         """
         self.cookie = cookie
-        utils.session.cookie = cookie
+        session_cookie = cookie
 
     async def get_token(self):
         """

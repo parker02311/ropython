@@ -1,6 +1,6 @@
 import requests
-import bs4
 import json
+from session import session_cookie
 
 
 class Request:

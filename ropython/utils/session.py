@@ -1,3 +1,3 @@
 """Stores information for the session"""
 
-cookie = None
+session_cookie = None
