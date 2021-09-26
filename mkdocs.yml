@@ -30,6 +30,13 @@ plugins:
             show_if_no_docstring: yes
             show_signature_annotations: yes
             show_root_heading: yes
-  - mermaid2:
-      arguments:
-        theme: dark
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.tabbed
+  - footnotes
+  - def_list
+  - pymdownx.tasklist
