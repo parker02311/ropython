@@ -1,6 +1,6 @@
 import requests
 import json
-from session import session_cookie
+from .session import session_cookie
 
 
 class Request:
