@@ -5,7 +5,7 @@ import mkdocs_gen_files
 nav = mkdocs_gen_files.Nav()
 
 for path in sorted(Path("ropython").glob("**/*.py")):
-    if not path == "ropython/__init__.py"
+    if not path == "ropython/__init__.py":
         module_path = path.with_suffix("")
         doc_path = path.with_suffix(".md")
         nav_path = str(doc_path).replace("ropython", "reference")
