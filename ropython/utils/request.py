@@ -1,7 +1,12 @@
 import requests
 import json
 from .session import session_cookie
-
+from .exceptions import (
+    HttpUnauthorized,
+    HttpUnknown,
+    HttpUnknownError,
+    HttpInternal
+)
 
 class Request:
     """
@@ -41,6 +46,13 @@ class Request:
         """
         request = requests.post(args, kwargs)
         if request.status_code is not 200:
-            raise json.dumps(request.text)
+            if request.status_code is 401:
+                raise HttpUnauthorized()
+            elif request.status_code is 404:
+                raise HttpUnknown()
+            elif request.status_code is 500:
+                raise HttpInternal()
+            else:
+                raise HttpUnknownError(request.status_code)
 
         return request
