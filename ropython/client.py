@@ -1,5 +1,6 @@
 from .utils.request import Request
 from .utils.session import session_cookie
+from .game import Game
 
 
 class Client:
@@ -29,3 +30,11 @@ class Client:
             return r.headers["x-csrf-token"]
 
         return None
+    
+    async def get_game(self, UniverseId: int) -> Game:
+        """
+        Get a game object which is required to do anything with games.
+        Attributes:
+            UniverseId: The ID of the game to get
+        """
+        pass

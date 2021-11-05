@@ -1,9 +1,9 @@
 from .utils.request import Request
 
 
-class DeveloperProducts:
+class Game:
     """
-    Developer product class
+    Game class
     """
 
     def __init__(self, UniverseId: int):
@@ -15,7 +15,7 @@ class DeveloperProducts:
         """
         self.UniverseId = UniverseId
 
-    async def Create(self, Name: str, Description: str, Price: int):
+    async def developer_product_create(self, Name: str, Description: str, Price: int):
         """
         Create's a developer product in the game specified when initiating the class.
 
