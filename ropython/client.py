@@ -1,4 +1,4 @@
-from .game import Game
+from .experience import Experience
 from typing import Optional
 import requests
 
@@ -32,10 +32,10 @@ class Client:
             self.token = r.headers["x-csrf-token"]
             return r.headers["x-csrf-token"]
     
-    async def get_game(self, UniverseId: int) -> Game:
+    async def get_experience(self, UniverseId: int) -> Game:
         """
         Get a game object which is required to do anything with games.
         Attributes:
             UniverseId: The ID of the game to get
         """
-        return Game(UniverseId)
+        return Experience(UniverseId)
