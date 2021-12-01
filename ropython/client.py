@@ -13,6 +13,7 @@ class Client:
         Create's the client
         Attributes:
             cookie: The Roblox cookie in it's entirety
+            proxies: The proxies of which to send from. This is not required.
         """
         self.proxise = proxies or {}
         self.session = requests.Session()
@@ -37,4 +38,4 @@ class Client:
         Attributes:
             UniverseId: The ID of the game to get
         """
-        pass
+        return Game(UniverseId)

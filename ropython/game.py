@@ -12,6 +12,9 @@ class Game:
         """
         self.UniverseId = UniverseId
 
+        if not UniverseId():
+            raise
+
     async def developer_product_create(self, Name: str, Description: str, Price: int):
         """
         Create's a developer product in the game specified when initiating the class.
