@@ -4,4 +4,4 @@ __license__ = "MIT"
 __copyright__ = "Copyright 2021 parker02311"
 
 from .client import Client
-from .game import Game
+from .experience import Experience
