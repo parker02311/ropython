@@ -11,6 +11,7 @@ class Client:
     def __init__(self, cookie: int = None, proxies: list = None):
         """
         Create's the client
+        
         Attributes:
             cookie: The Roblox cookie in it's entirety
             proxies: The proxies of which to send from. This is not required.
@@ -32,9 +33,10 @@ class Client:
             self.token = r.headers["x-csrf-token"]
             return r.headers["x-csrf-token"]
     
-    async def get_experience(self, UniverseId: int) -> Game:
+    async def get_experience(self, UniverseId: int) -> Experience:
         """
-        Get a game object which is required to do anything with games.
+        Get a experience object which is required to do anything with experiences.
+
         Attributes:
             UniverseId: The ID of the game to get
         """
