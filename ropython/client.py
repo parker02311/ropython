@@ -1,6 +1,6 @@
-from .utils.request import Request
-from .utils.session import session_cookie
 from .game import Game
+from typing import Optional
+import requests
 
 
 class Client:
@@ -8,28 +8,28 @@ class Client:
     Client
     """
 
-    def __init__(self, cookie: int = None):
+    def __init__(self, cookie: int = None, proxies: list = None):
         """
         Create's the client
         Attributes:
             cookie: The Roblox cookie in it's entirety
         """
-        self.cookie = cookie
-        session_cookie = cookie
+        self.proxise = proxies or {}
+        self.session = requests.Session()
+        self.session.cookies[".ROBLOSECURITY"] = cookie
+        self.session.headers["x-csrf-token"] = get_token() or None
 
-    async def get_token(self):
+    def get_token(self) -> Optional[str]:
         """
         Get's a x-csrf-token from Roblox which is required for all requests.
         """
         # This doesn't acutally log you out since we aren't passing in a token
-        r = Request.post(
+        r = self.session.post(
             "https://auth.roblox.com/v2/logout", cookies={".ROBLOSECURITY": self.cookie}
         )
         if r.headers["x-csrf-token"]:
             self.token = r.headers["x-csrf-token"]
             return r.headers["x-csrf-token"]
-
-        return None
     
     async def get_game(self, UniverseId: int) -> Game:
         """
