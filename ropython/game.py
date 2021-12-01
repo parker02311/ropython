@@ -1,6 +1,3 @@
-from .utils.request import Request
-
-
 class Game:
     """
     Game class
