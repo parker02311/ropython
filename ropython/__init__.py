@@ -5,3 +5,5 @@ __copyright__ = "Copyright 2021 parker02311"
 
 from .client import Client
 from .experience import Experience
+
+RobloxClient = Client
