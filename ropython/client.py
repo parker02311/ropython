@@ -1,43 +1,18 @@
-from .experience import Experience
-from typing import Optional
 import requests
-
 
 class Client:
     """
     Client
     """
 
-    def __init__(self, cookie: int = None, proxies: list = None):
+    def __init__(self, apikey: str = None, proxies: list = None):
         """
         Create's the client
         
         Attributes:
-            cookie: The Roblox cookie in it's entirety
+            apikey: The API key that should be used for sending requests
             proxies: The proxies of which to send from. This is not required.
         """
-        self.proxise = proxies or {}
+        self.proxies = proxies or {}
         self.session = requests.Session()
-        self.session.cookies[".ROBLOSECURITY"] = cookie
-        self.session.headers["x-csrf-token"] = get_token() or None
-
-    def get_token(self) -> Optional[str]:
-        """
-        Get's a x-csrf-token from Roblox which is required for all requests.
-        """
-        # This doesn't acutally log you out since we aren't passing in a token
-        r = self.session.post(
-            "https://auth.roblox.com/v2/logout", cookies={".ROBLOSECURITY": self.cookie}
-        )
-        if r.headers["x-csrf-token"]:
-            self.token = r.headers["x-csrf-token"]
-            return r.headers["x-csrf-token"]
-    
-    async def get_experience(self, UniverseId: int) -> Experience:
-        """
-        Get a experience object which is required to do anything with experiences.
-
-        Attributes:
-            UniverseId: The ID of the game to get
-        """
-        return Experience(UniverseId)
+        self.session.headers["x-api-key"] = apikey

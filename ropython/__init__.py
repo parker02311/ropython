@@ -1,9 +1,6 @@
 __title__ = "ropython"
 __author__ = "parker02311"
 __license__ = "MIT"
-__copyright__ = "Copyright 2021-2022 parker02311"
+__copyright__ = "Copyright 2021-2023 parker02311"
 
 from .client import Client
-from .experience import Experience
-
-RobloxClient = Client
